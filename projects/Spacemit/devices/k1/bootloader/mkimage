@@ -105,10 +105,9 @@ sync
 echo "spacemit: building rootfs (storage, ext4)..."
 rm -rf "${IMG_TMP_MNT}/rootfs"
 mkdir -p "${IMG_TMP_MNT}/rootfs"
-# Note: .please_resize_me is not created because the fs-resize script
-# expects partition number 2 (/dev/mmcblkXp2), but the K1 GPT layout
-# uses partition 6 for rootfs. The rootfs is already sized to
-# ROOTFS_SIZE in this mkimage script, so auto-resize is not needed.
+# Grow storage (partition 6) to the full SD card on first boot. fs-resize
+# detects the partition number of /storage, so the K1 GPT layout works too.
+touch "${IMG_TMP_MNT}/rootfs/.please_resize_me"
 ROOTFS_IMG="${IMG_TMP_MNT}/rootfs.ext4"
 mke2fs -F -q -t ext4 -L STORAGE -m 0 -d "${IMG_TMP_MNT}/rootfs" "${ROOTFS_IMG}" ${ROOTFS_SIZE}M
 e2fsck -n "${ROOTFS_IMG}" >/dev/null 2>&1 || true
