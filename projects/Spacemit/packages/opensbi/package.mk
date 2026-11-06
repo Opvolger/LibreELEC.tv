@@ -12,6 +12,11 @@ PKG_URL="https://github.com/spacemit-com/opensbi/archive/k1-bl-v2.2.y.tar.gz"
 PKG_DEPENDS_TARGET="toolchain u-boot-tools:host dtc:host"
 PKG_LONGDESC="SpacemiT K1 vendor OpenSBI (fw_dynamic.itb)"
 
+pre_make_target() {
+  # vendor OpenSBI 1.3 does not build warning-free with newer GCC
+  sed -i 's/ -Werror / /' ${PKG_BUILD}/Makefile
+}
+
 make_target() {
   make CROSS_COMPILE="${TARGET_KERNEL_PREFIX}" \
        PLATFORM=generic PLATFORM_DEFCONFIG=k1_defconfig \
