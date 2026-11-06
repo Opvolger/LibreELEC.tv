@@ -47,7 +47,7 @@
     INSTALLER_SUPPORT="no"
 
   # additional packages to install
-    ADDITIONAL_PACKAGES+=" dtc img-gpu-powervr k1x-vpu-firmware mpp"
+    ADDITIONAL_PACKAGES+=" dtc img-gpu-powervr k1x-vpu-firmware esos-firmware mpp"
 
   # PulseAudio crashes on RISC-V (NULL deref in libpulsecommon-17.0.so),
   # disable it and use ALSA only for audio.
