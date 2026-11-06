@@ -82,7 +82,7 @@ mkdir -p "${IMG_TMP_MNT}/bootfs"
 # KERNEL -> Image, SYSTEM, md5 checksums, all K1 dtbs, env overlay
 cp -av "${TARGET_IMG}/${BUILD_NAME}.kernel" "${IMG_TMP_MNT}/bootfs/Image"
 cp -av "${TARGET_IMG}/${BUILD_NAME}.system" "${IMG_TMP_MNT}/bootfs/SYSTEM"
-cp -av "${RELEASE_DIR}/target/KERNEL.md5" "${IMG_TMP_MNT}/bootfs/KERNEL.md5"
+cp -av "${RELEASE_DIR}/target/KERNEL.md5" "${IMG_TMP_MNT}/bootfs/Image.md5"
 cp -av "${RELEASE_DIR}/target/SYSTEM.md5" "${IMG_TMP_MNT}/bootfs/SYSTEM.md5"
 cp -av "${RELEASE_DIR}/3rdparty/bootloader/env_k1-x.txt" "${IMG_TMP_MNT}/bootfs/"
 
