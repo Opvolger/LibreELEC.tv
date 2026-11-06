@@ -10,6 +10,8 @@ PKG_VERSION="2022.10"
 PKG_ARCH="riscv64"
 PKG_LICENSE="GPL-2.0-or-later"
 PKG_SITE="https://github.com/spacemit-com/uboot-2022.10"
+# Coupled to the other K1 vendor packages: see "Version pinning" in
+# projects/Spacemit/options before changing the version.
 # Tested k1-bl-v2.2.y commit (newer than the k1-bl-v2.2.10-release tag).
 PKG_COMMIT="3b5dc97b7e4909fe434405d222353553b2124b6a"
 PKG_URL="https://github.com/spacemit-com/uboot-2022.10/archive/${PKG_COMMIT}.tar.gz"

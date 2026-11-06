@@ -8,6 +8,8 @@ PKG_VERSION="1.3"
 PKG_ARCH="riscv64"
 PKG_LICENSE="BSD-2-Clause"
 PKG_SITE="https://github.com/spacemit-com/opensbi"
+# Coupled to the other K1 vendor packages: see "Version pinning" in
+# projects/Spacemit/options before changing the version.
 # Tested k1-bl-v2.2.y commit (newer than the k1-bl-v2.2.10-release tag).
 PKG_COMMIT="fe3b1fbb9a216d23a70988ee516ee60771417a7e"
 PKG_URL="https://github.com/spacemit-com/opensbi/archive/${PKG_COMMIT}.tar.gz"

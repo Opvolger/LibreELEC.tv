@@ -14,6 +14,8 @@ PKG_VERSION="k1-bl-v2.2.11-release"
 PKG_ARCH="riscv64"
 PKG_LICENSE="LicenseRef-nonfree"
 PKG_SITE="https://github.com/spacemit-com/buildroot-ext"
+# Coupled to the other K1 vendor packages: see "Version pinning" in
+# projects/Spacemit/options before changing the version.
 PKG_URL="https://raw.githubusercontent.com/spacemit-com/buildroot-ext/${PKG_VERSION}/board/spacemit/k1/target_overlay/lib/firmware/esos.elf"
 PKG_SHA256="a7ef0129310a0fdc71d848490b4d6fdd73fbecc31d9f6b314662617dfdaaaefc"
 PKG_DEPENDS_TARGET="toolchain"

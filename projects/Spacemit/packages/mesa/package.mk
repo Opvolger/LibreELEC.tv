@@ -15,6 +15,8 @@ PKG_VERSION="24.3.0"
 PKG_ARCH="riscv64"
 PKG_LICENSE="MIT"
 PKG_SITE="https://github.com/spacemit-com/mesa3d"
+# Coupled to the other K1 vendor packages: see "Version pinning" in
+# projects/Spacemit/options before changing the version.
 # Tested k1-bl-v2.2.y commit (newer than the k1-bl-v2.2.10-release tag).
 PKG_COMMIT="5a37ce2f58070017d0b25e7434232dff457dee34"
 PKG_URL="https://github.com/spacemit-com/mesa3d/archive/${PKG_COMMIT}.tar.gz"

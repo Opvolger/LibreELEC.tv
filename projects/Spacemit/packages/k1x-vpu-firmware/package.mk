@@ -10,6 +10,8 @@ PKG_VERSION="0.0.7"
 PKG_ARCH="riscv64"
 PKG_LICENSE="CLOSED"
 PKG_SITE="https://github.com/spacemit-com/k1x-vpu-firmware"
+# Coupled to the other K1 vendor packages: see "Version pinning" in
+# projects/Spacemit/options before changing the version.
 PKG_URL="https://github.com/spacemit-com/k1x-vpu-firmware/archive/k1-bl-v2.2.11-release.tar.gz"
 PKG_SHA256="3c06728e492cd5ce3c93ae57244c08dbb907b70f68b030f3be3bd6b4e605bff3"
 PKG_DEPENDS_TARGET="toolchain"
